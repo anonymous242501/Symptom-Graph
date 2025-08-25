@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Graphe Symptômes ↔ Troubles</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #controls {
+      width: 260px;
+      padding: 1rem;
+      background: #ffffff;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow-y: auto;
+    }
+
+    #graph {
+      flex: 1;
+      position: relative;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+    }
+
+    h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .checkbox-list {
+      max-height: 180px;
+      overflow-y: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 0.5rem;
+      background: #f9fafb;
+    }
+
+    .checkbox-list label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+      cursor: pointer;
+    }
+
+    .checkbox-list input:disabled {
+      cursor: not-allowed;
+    }
+
+    #resetBtn {
+      padding: 0.5rem;
+      border: none;
+      background: #3b82f6;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #resetBtn:hover {
+      background: #2563eb;
+    }
+
+    .tooltip {
+      position: absolute;
+      background: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="controls">
+    <h2>Filtres</h2>
+
+    <label for="poidsFilter">Poids minimum</label>
+    <input type="range" id="poidsFilter" min="1" max="5" value="1">
+    <span id="poidsValue">1</span>
+
+    <label>Troubles</label>
+    <div id="symptomesFilter" class="checkbox-list"></div>
+
+    <label>Symptômes</label>
+    <div id="troublesFilter" class="checkbox-list"></div>
+
+    <button id="resetBtn">Réinitialiser</button>
+  </div>
+
+  <!-- Graphe -->
+  <div id="graph">
+    <svg></svg>
+    <div class="tooltip" id="tooltip"></div>
+  </div>
+
+  <script>
+    const svg = d3.select("svg");
+    const g = svg.append("g");
+    const tooltip = d3.select("#tooltip");
+
+    let allData, simulation, link, node, label;
+
+    // Zoom et pan
+    svg.call(d3.zoom().on("zoom", (event) => {
+      g.attr("transform", event.transform);
+    }));
+
+    // Charger CSV
+    d3.csv("data.csv").then(data => {
+      allData = data;
+      populateFilters();
+      updateGraph();
+    });
+
+    function populateFilters() {
+      const symptomes = Array.from(new Set(allData.map(d => d.Source))).sort();
+      const troubles = Array.from(new Set(allData.map(d => d.Target))).sort();
+
+      const symptomesContainer = document.getElementById("symptomesFilter");
+      const troublesContainer = document.getElementById("troublesFilter");
+
+      symptomes.forEach(s => {
+        const lbl = document.createElement("label");
+        lbl.innerHTML = `<input type="checkbox" value="${s}"> ${s}`;
+        symptomesContainer.appendChild(lbl);
+      });
+
+      troubles.forEach(t => {
+        const lbl = document.createElement("label");
+        lbl.innerHTML = `<input type="checkbox" value="${t}"> ${t}`;
+        troublesContainer.appendChild(lbl);
+      });
+
+      // Listeners
+      symptomesContainer.querySelectorAll("input").forEach(cb => cb.addEventListener("change", handleExclusiveFilters));
+      troublesContainer.querySelectorAll("input").forEach(cb => cb.addEventListener("change", handleExclusiveFilters));
+
+      document.getElementById("poidsFilter").addEventListener("input", e => {
+        document.getElementById("poidsValue").textContent = e.target.value;
+        updateGraph();
+      });
+      document.getElementById("resetBtn").addEventListener("click", () => {
+        document.getElementById("poidsFilter").value = 1;
+        document.getElementById("poidsValue").textContent = "1";
+        document.querySelectorAll("#symptomesFilter input, #troublesFilter input").forEach(cb => {
+          cb.checked = false;
+          cb.disabled = false;
+        });
+        updateGraph();
+      });
+    }
+
+    function handleExclusiveFilters() {
+      const selectedSymptomes = Array.from(document.querySelectorAll("#symptomesFilter input:checked"));
+      const selectedTroubles = Array.from(document.querySelectorAll("#troublesFilter input:checked"));
+
+      const symptomeCheckboxes = document.querySelectorAll("#symptomesFilter input");
+      const troubleCheckboxes = document.querySelectorAll("#troublesFilter input");
+
+      if (selectedSymptomes.length > 0) {
+        troubleCheckboxes.forEach(cb => cb.disabled = true);
+      } else {
+        troubleCheckboxes.forEach(cb => cb.disabled = false);
+      }
+
+      if (selectedTroubles.length > 0) {
+        symptomeCheckboxes.forEach(cb => cb.disabled = true);
+      } else {
+        symptomeCheckboxes.forEach(cb => cb.disabled = false);
+      }
+
+      updateGraph();
+    }
+
+    function updateGraph() {
+      if (!allData) return;
+
+      const poidsMin = +document.getElementById("poidsFilter").value;
+
+      const selectedSymptomes = Array.from(document.querySelectorAll("#symptomesFilter input:checked")).map(cb => cb.value);
+      const selectedTroubles = Array.from(document.querySelectorAll("#troublesFilter input:checked")).map(cb => cb.value);
+
+      const nodesMap = {};
+      const links = allData.filter(d => +d.Weight >= poidsMin)
+        .filter(d => {
+          if (selectedSymptomes.length > 0 && !selectedSymptomes.includes(d.Source)) return false;
+          if (selectedTroubles.length > 0 && !selectedTroubles.includes(d.Target)) return false;
+          return true;
+        })
+        .map(d => {
+          if (!nodesMap[d.Source]) nodesMap[d.Source] = { id: d.Source, type: "symptome" };
+          if (!nodesMap[d.Target]) nodesMap[d.Target] = { id: d.Target, type: "trouble" };
+          return { source: d.Source, target: d.Target, weight: +d.Weight };
+        });
+
+      const nodes = Object.values(nodesMap);
+
+      g.selectAll("*").remove();
+
+      link = g.append("g")
+        .attr("stroke", "#aaa")
+        .selectAll("line")
+        .data(links)
+        .join("line")
+        .attr("stroke-width", d => d.weight);
+
+      node = g.append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", d => d.type === "trouble" ? 20 : 12)
+        .attr("fill", d => d.type === "trouble" ? "#ef4444" : "#3b82f6")
+        .style("stroke", "#fff")
+        .style("stroke-width", 2)
+        .call(drag(simulation))
+        .on("mouseover", (event, d) => {
+          tooltip.style("opacity", 1).html(`<b>${d.id}</b><br>Type: ${d.type}`);
+        })
+        .on("mousemove", event => {
+          tooltip.style("left", (event.pageX + 10) + "px")
+                 .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", () => tooltip.style("opacity", 0));
+
+      label = g.append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .text(d => d.id)
+        .attr("font-size", 12)
+        .attr("dy", -15)
+        .attr("text-anchor", "middle");
+
+      simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id).distance(150).strength(0.7))
+        .force("charge", d3.forceManyBody().strength(-400))
+        .force("center", d3.forceCenter(window.innerWidth / 2, window.innerHeight / 2))
+        .force("collision", d3.forceCollide().radius(30));
+
+      simulation.on("tick", () => {
+        link
+          .attr("x1", d => d.source.x)
+          .attr("y1", d => d.source.y)
+          .attr("x2", d => d.target.x)
+          .attr("y2", d => d.target.y);
+
+        node
+          .attr("cx", d => d.x)
+          .attr("cy", d => d.y);
+
+        label
+          .attr("x", d => d.x)
+          .attr("y", d => d.y);
+      });
+    }
+
+    function drag(simulation) {
+      return d3.drag()
+        .on("start", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+        .on("drag", (event, d) => {
+          d.fx = event.x;
+          d.fy = event.y;
+        })
+        .on("end", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        });
+    }
+  </script>
+</body>
+</html>
