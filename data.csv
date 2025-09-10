@@ -1,161 +1,161 @@
-Source,Target,Weight
-AdvancedSleepWakePhaseDisorder,Advance_in_the_sleep_period,4
-AdvancedSleepWakePhaseDisorder,Daytime_sleepiness,1
-AdvancedSleepWakePhaseDisorder,Insomnia_early,4
-BenignSleepMyoclonusOfInfancy,Myoclonic_jerks_icsd,5
-CentralSleepApneaDueToHighAltitudePeriodicBreathing,Breath_abnormalities_complaint,4
-CentralSleepApneaDueToHighAltitudePeriodicBreathing,Breath_abnormalities_observation,4
-CentralSleepApneaDueToHighAltitudePeriodicBreathing,Daytime_sleepiness,3
-CentralSleepApneaDueToHighAltitudePeriodicBreathing,Insomnia_initiating,1
-CentralSleepApneaDueToHighAltitudePeriodicBreathing,Insomnia_maintaining,1
-CentralSleepApneaDueToHighAltitudePeriodicBreathing,Non_restorative_sleep,3
-CentralSleepApneaDueToHighAltitudePeriodicBreathing,Headache_icsd,1
-CentralSleepApneaWithCheyneStokesBreathing,Breath_abnormalities_complaint,4
-CentralSleepApneaWithCheyneStokesBreathing,Breath_abnormalities_observation,4
-CentralSleepApneaWithCheyneStokesBreathing,Insomnia_initiating,1
-CentralSleepApneaWithCheyneStokesBreathing,Insomnia_maintaining,1
-CentralSleepApneaWithCheyneStokesBreathing,Non_restorative_sleep,3
-CentralSleepApneaWithCheyneStokesBreathing,Snoring,1
-ConfusionalArousals,Abnormal_responsiveness,5
-ConfusionalArousals,Altered_oniric_activity,1
-ConfusionalArousals,Amnesia,3
-ConfusionalArousals,Behavioral_symptoms_during_sleep,1
-ConfusionalArousals,Incomplete_awakening_icsd,4
-DelayedSleepWakePhaseDisorder,Daytime_sleepiness,1
-DelayedSleepWakePhaseDisorder,Delay_in_the_sleep_period,4
-DelayedSleepWakePhaseDisorder,Insomnia_initiating,4
-DelayedSleepWakePhaseDisorder,Sleep_inertia,1
-ExplodingHeadSyndrome,Fright_behavior,5
-ExplodingHeadSyndrome,Insomnia_initiating,1
-ExplodingHeadSyndrome,Insomnia_maintaining,1
-ExplodingHeadSyndrome,Hallucination_icsd,1
-HypersomniaAssociatedWithPsychiatricDisorder,Daytime_sleepiness,4
-HypersomniaAssociatedWithPsychiatricDisorder,Lapses_into_sleep,4
-IdiopathicHypersomnia,Daytime_sleepiness,5
-IdiopathicHypersomnia,Lapses_into_sleep,4
-IdiopathicHypersomnia,Long_sleep_time,5
-IdiopathicHypersomnia,Sleep_inertia,4
-InsomniaDisorderChronic,Affective_symptoms,3
-InsomniaDisorderChronic,Daytime_sleepiness,5
-InsomniaDisorderChronic,Fatigue,4
-InsomniaDisorderChronic,Insomnia_early,5
-InsomniaDisorderChronic,Insomnia_initiating,5
-InsomniaDisorderChronic,Insomnia_maintaining,5
-InsomniaDisorderChronic,Sleep_resistance,4
-InsomniaDisorderChronic,Behavioral_symptoms_during_wake_icsd,3
-InsomniaDisorderChronic,Cognitive_symptoms_icsd,3
-InsomniaDisorderChronic,Malaise_icsd,1
-InsomniaDisorderShortTerm,Affective_symptoms,2
-InsomniaDisorderShortTerm,Daytime_sleepiness,5
-InsomniaDisorderShortTerm,Fatigue,3
-InsomniaDisorderShortTerm,Insomnia_early,5
-InsomniaDisorderShortTerm,Insomnia_initiating,5
-InsomniaDisorderShortTerm,Insomnia_maintaining,5
-InsomniaDisorderShortTerm,Sleep_resistance,3
-InsomniaDisorderShortTerm,Behavioral_symptoms_during_wake_icsd,2
-InsomniaDisorderShortTerm,Cognitive_symptoms_icsd,2
-InsomniaDisorderShortTerm,Malaise_icsd,1
-InsufficientSleepSyndrome,Daytime_sleepiness,4
-InsufficientSleepSyndrome,Lapses_into_sleep,4
-InsufficientSleepSyndrome,Short_sleep_time,4
-InsufficientSleepSyndrome,Behavioral_symptoms_during_wake_icsd,3
-IrregularSleepWakeRhythmDisorder,Absent_of_major_sleep_period,4
-IrregularSleepWakeRhythmDisorder,Daytime_sleepiness,3
-IrregularSleepWakeRhythmDisorder,Insomnia_early,3
-IrregularSleepWakeRhythmDisorder,Insomnia_initiating,3
-IrregularSleepWakeRhythmDisorder,Insomnia_maintaining,3
-JetLagDisorder,Daytime_sleepiness,1
-JetLagDisorder,Insomnia_early,3
-JetLagDisorder,Insomnia_initiating,3
-JetLagDisorder,Insomnia_maintaining,3
-JetLagDisorder,Short_sleep_time,3
-JetLagDisorder,Malaise_icsd,1
-JetLagDisorder,Somatic_symptoms_icsd,1
-KleineLevinSyndrome,Daytime_sleepiness,5
-KleineLevinSyndrome,Eating_symptoms,4
-KleineLevinSyndrome,Altered_perception_icsd,4
-KleineLevinSyndrome,Behavioral_symptoms_during_wake_icsd,4
-KleineLevinSyndrome,Cognitive_symptoms_icsd,4
-NarcolepsyType1,Cataplexy,5
-NarcolepsyType1,Daytime_sleepiness,5
-NarcolepsyType1,Lapses_into_sleep,5
-NarcolepsyType2,Daytime_sleepiness,5
-NarcolepsyType2,Lapses_into_sleep,5
-NightmareDisorder,Affective_symptoms,3
-NightmareDisorder,Altered_oniric_activity,5
-NightmareDisorder,Daytime_sleepiness,1
-NightmareDisorder,Fatigue,1
-NightmareDisorder,Insomnia_maintaining,1
-NightmareDisorder,Normal_responsiveness,1
-NightmareDisorder,Sleep_resistance,1
-NightmareDisorder,Behavioral_symptoms_during_wake_icsd,1
-NightmareDisorder,Cognitive_symptoms_icsd,1
-Non24HourSleepWakeRhythmDisorder,Circadian_period_gt_24h,4
-Non24HourSleepWakeRhythmDisorder,Daytime_sleepiness,3
-Non24HourSleepWakeRhythmDisorder,Insomnia_early,3
-Non24HourSleepWakeRhythmDisorder,Insomnia_initiating,3
-Non24HourSleepWakeRhythmDisorder,Insomnia_maintaining,3
-ObstructiveSleepApneaAdult,Breath_abnormalities_complaint,4
-ObstructiveSleepApneaAdult,Breath_abnormalities_observation,4
-ObstructiveSleepApneaAdult,Daytime_sleepiness,4
-ObstructiveSleepApneaAdult,Fatigue,4
-ObstructiveSleepApneaAdult,Insomnia_early,1
-ObstructiveSleepApneaAdult,Insomnia_initiating,1
-ObstructiveSleepApneaAdult,Insomnia_maintaining,1
-ObstructiveSleepApneaAdult,Non_restorative_sleep,3
-ObstructiveSleepApneaAdult,Snoring,5
-ObstructiveSleepApneaPediatric,Breath_abnormalities_observation,4
-ObstructiveSleepApneaPediatric,Daytime_sleepiness,3
-ObstructiveSleepApneaPediatric,Snoring,4
-ObstructiveSleepApneaPediatric,Behavioral_symptoms_during_wake_icsd,2
-PrimaryCentralSleepApnea,Breath_abnormalities_complaint,5
-PrimaryCentralSleepApnea,Breath_abnormalities_observation,5
-PrimaryCentralSleepApnea,Daytime_sleepiness,3
-PrimaryCentralSleepApnea,Insomnia_initiating,1
-PrimaryCentralSleepApnea,Insomnia_maintaining,1
-PrimaryCentralSleepApnea,Non_restorative_sleep,3
-PrimaryCentralSleepApnea,Snoring,1
-PrimaryCentralSleepApneaOfInfancy,Breath_abnormalities_observation,5
-PrimaryCentralSleepApneaOfInfancy,Cyanosis_icsd,4
-PrimaryCentralSleepApneaOfPrematurity,Breath_abnormalities_observation,5
-PrimaryCentralSleepApneaOfPrematurity,Cyanosis_icsd,4
-PropriospinalMyoclonusAtSleepOnset,Myoclonic_jerks_icsd,5
-REMSleepBehaviorDisorder,Altered_oniric_activity,1
-REMSleepBehaviorDisorder,Behavioral_symptoms_during_sleep,5
-REMSleepBehaviorDisorder,Vocalisation,4
-RecurrentIsolatedSleepParalysis,Motor_paralysis_icsd,5
-RestlessLegsSyndrome,Insomnia_initiating,3
-RestlessLegsSyndrome,Insomnia_maintaining,3
-RestlessLegsSyndrome,Leg_sensory_discomfort,4
-RestlessLegsSyndrome,Legs_movement,5
-ShiftWorkDisorder,Daytime_sleepiness,3
-ShiftWorkDisorder,Disturbed_sleep_period,3
-ShiftWorkDisorder,Insomnia_early,3
-ShiftWorkDisorder,Insomnia_initiating,3
-ShiftWorkDisorder,Insomnia_maintaining,3
-ShiftWorkDisorder,Short_sleep_time,3
-SleepRelatedBruxism,Tooth_grinding_icsd,5
-SleepRelatedEatingDisorder,Amnesia,3
-SleepRelatedEatingDisorder,Eating_symptoms,5
-SleepRelatedEatingDisorder,Incomplete_awakening,4
-SleepRelatedHallucinations,Hallucination_icsd,5
-SleepRelatedLegCramps,Leg_sensory_discomfort,1
-SleepRelatedRhythmicMovementDisorder,Insomnia_early,1
-SleepRelatedRhythmicMovementDisorder,Insomnia_initiating,1
-SleepRelatedRhythmicMovementDisorder,Insomnia_maintaining,1
-SleepRelatedRhythmicMovementDisorder,Rhythmic_movement_icsd,5
-SleepTerrors,Abnormal_responsiveness,5
-SleepTerrors,Altered_oniric_activity,1
-SleepTerrors,Amnesia,3
-SleepTerrors,Autonomic_symptoms,3
-SleepTerrors,Behavioral_symptoms_during_sleep,1
-SleepTerrors,Fright_behavior,4
-SleepTerrors,Incomplete_awakening,4
-SleepTerrors,Vocalisation,1
-Sleepwalking,Abnormal_responsiveness,4
-Sleepwalking,Altered_oniric_activity,1
-Sleepwalking,Ambulation,5
-Sleepwalking,Amnesia,3
-Sleepwalking,Behavioral_symptoms_during_sleep,1
-Sleepwalking,Incomplete_awakening,4
-SleepEnuresis,Unvolontary_voiding,5
+Disorder,Symptom,Weight,Colonne 1
+Advanced Sleep Wake Phase Disorder,Advance in the sleep period,4,
+Advanced Sleep Wake Phase Disorder,Daytime sleepiness,1,
+Advanced Sleep Wake Phase Disorder,Insomnia early,4,
+Benign Sleep Myoclonus Of Infancy,Myoclonic jerks (icsd),5,
+Central Sleep Apnea Due To High Altitude Periodic Breathing,Breath_abnormalities_complaint,4,
+Central Sleep Apnea Due To High Altitude Periodic Breathing,Breath_abnormalities_observation,4,
+Central Sleep Apnea Due To High Altitude Periodic Breathing,Daytime_sleepiness,3,
+Central Sleep Apnea Due To High Altitude Periodic Breathing,Insomnia_initiating,1,
+Central Sleep Apnea Due To High Altitude Periodic Breathing,Insomnia_maintaining,1,
+Central Sleep Apnea Due To High Altitude Periodic Breathing,Non_restorative_sleep,3,
+Central Sleep Apnea Due To High Altitude Periodic Breathing,Headache_icsd,1,
+Central Sleep Apnea With Cheyne Stokes Breathing,Breath_abnormalities_complaint,4,
+Central Sleep Apnea With Cheyne Stokes Breathing,Breath_abnormalities_observation,4,
+Central Sleep Apnea With Cheyne Stokes Breathing,Insomnia_initiating,1,
+Central Sleep Apnea With Cheyne Stokes Breathing,Insomnia_maintaining,1,
+Central Sleep Apnea With Cheyne Stokes Breathing,Non_restorative_sleep,3,
+Central Sleep Apnea With Cheyne Stokes Breathing,Snoring,1,
+Confusional Arousals,Abnormal_responsiveness,5,
+Confusional Arousals,Altered_oniric_activity,1,
+Confusional Arousals,Amnesia,3,
+Confusional Arousals,Behavioral_symptoms_during_sleep,1,
+Confusional Arousals,Incomplete_awakening_icsd,4,
+Delayed Sleep Wake Phase Disorder,Daytime_sleepiness,1,
+Delayed Sleep Wake Phase Disorder,Delay_in_the_sleep_period,4,
+Delayed Sleep Wake Phase Disorder,Insomnia_initiating,4,
+Delayed Sleep Wake Phase Disorder,Sleep_inertia,1,
+Exploding Head Syndrome,Fright_behavior,5,
+Exploding Head Syndrome,Insomnia_initiating,1,
+Exploding Head Syndrome,Insomnia_maintaining,1,
+Exploding Head Syndrome,Hallucination_icsd,1,
+Hypersomnia Associated With Psychiatric Disorder,Daytime_sleepiness,4,
+Hypersomnia Associated With Psychiatric Disorder,Lapses_into_sleep,4,
+Idiopathic Hypersomnia,Daytime_sleepiness,5,
+Idiopathic Hypersomnia,Lapses_into_sleep,4,
+Idiopathic Hypersomnia,Long_sleep_time,5,
+Idiopathic Hypersomnia,Sleep_inertia,4,
+Insomnia Disorder Chronic,Affective_symptoms,3,
+Insomnia Disorder Chronic,Daytime_sleepiness,5,
+Insomnia Disorder Chronic,Fatigue,4,
+Insomnia Disorder Chronic,Insomnia_early,5,
+Insomnia Disorder Chronic,Insomnia_initiating,5,
+Insomnia Disorder Chronic,Insomnia_maintaining,5,
+Insomnia Disorder Chronic,Sleep_resistance,4,
+Insomnia Disorder Chronic,Behavioral_symptoms_during_wake_icsd,3,
+Insomnia Disorder Chronic,Cognitive_symptoms_icsd,3,
+Insomnia Disorder Chronic,Malaise_icsd,1,
+Insomnia Disorder Short Term,Affective_symptoms,2,
+Insomnia Disorder Short Term,Daytime_sleepiness,5,
+Insomnia Disorder Short Term,Fatigue,3,
+Insomnia Disorder Short Term,Insomnia_early,5,
+Insomnia Disorder Short Term,Insomnia_initiating,5,
+Insomnia Disorder Short Term,Insomnia_maintaining,5,
+Insomnia Disorder Short Term,Sleep_resistance,3,
+Insomnia Disorder Short Term,Behavioral_symptoms_during_wake_icsd,2,
+Insomnia Disorder Short Term,Cognitive_symptoms_icsd,2,
+Insomnia Disorder Short Term,Malaise_icsd,1,
+Insufficient Sleep Syndrome,Daytime_sleepiness,4,
+Insufficient Sleep Syndrome,Lapses_into_sleep,4,
+Insufficient Sleep Syndrome,Short_sleep_time,4,
+Insufficient Sleep Syndrome,Behavioral_symptoms_during_wake_icsd,3,
+Irregular Sleep Wake Rhythm Disorder,Absent_of_major_sleep_period,4,
+Irregular Sleep Wake Rhythm Disorder,Daytime_sleepiness,3,
+Irregular Sleep Wake Rhythm Disorder,Insomnia_early,3,
+Irregular Sleep Wake Rhythm Disorder,Insomnia_initiating,3,
+Irregular Sleep Wake Rhythm Disorder,Insomnia_maintaining,3,
+Jet Lag Disorder,Daytime_sleepiness,1,
+Jet Lag Disorder,Insomnia_early,3,
+Jet Lag Disorder,Insomnia_initiating,3,
+Jet Lag Disorder,Insomnia_maintaining,3,
+Jet Lag Disorder,Short_sleep_time,3,
+Jet Lag Disorder,Malaise_icsd,1,
+Jet Lag Disorder,Somatic_symptoms_icsd,1,
+Kleine Levin Syndrome,Daytime_sleepiness,5,
+Kleine Levin Syndrome,Eating_symptoms,4,
+Kleine Levin Syndrome,Altered_perception_icsd,4,
+Kleine Levin Syndrome,Behavioral_symptoms_during_wake_icsd,4,
+Kleine Levin Syndrome,Cognitive_symptoms_icsd,4,
+Narcolepsy Type 1,Cataplexy,5,
+Narcolepsy Type 2,Daytime_sleepiness,5,
+Narcolepsy Type 3,Lapses_into_sleep,5,
+Narcolepsy Type 2,Daytime_sleepiness,5,
+Narcolepsy Type 2,Lapses_into_sleep,5,
+Nightmare Disorder,Affective_symptoms,3,
+Nightmare Disorder,Altered_oniric_activity,5,
+Nightmare Disorder,Daytime_sleepiness,1,
+Nightmare Disorder,Fatigue,1,
+Nightmare Disorder,Insomnia_maintaining,1,
+Nightmare Disorder,Normal_responsiveness,1,
+Nightmare Disorder,Sleep_resistance,1,
+Nightmare Disorder,Behavioral_symptoms_during_wake_icsd,1,
+Nightmare Disorder,Cognitive_symptoms_icsd,1,
+Non 24 Hour Sleep Wake Rhythm Disorder,Circadian_period_gt_24h,4,
+Non 24 Hour Sleep Wake Rhythm Disorder,Daytime_sleepiness,3,
+Non 24 Hour Sleep Wake Rhythm Disorder,Insomnia_early,3,
+Non 24 Hour Sleep Wake Rhythm Disorder,Insomnia_initiating,3,
+Non 24 Hour Sleep Wake Rhythm Disorder,Insomnia_maintaining,3,
+Obstructive Sleep Apnea Adult,Breath_abnormalities_complaint,4,
+Obstructive Sleep Apnea Adult,Breath_abnormalities_observation,4,
+Obstructive Sleep Apnea Adult,Daytime_sleepiness,4,
+Obstructive Sleep Apnea Adult,Fatigue,4,
+Obstructive Sleep Apnea Adult,Insomnia_early,1,
+Obstructive Sleep Apnea Adult,Insomnia_initiating,1,
+Obstructive Sleep Apnea Adult,Insomnia_maintaining,1,
+Obstructive Sleep Apnea Adult,Non_restorative_sleep,3,
+Obstructive Sleep Apnea Adult,Snoring,5,
+Obstructive Sleep Apnea Pediatric,Breath_abnormalities_observation,4,
+Obstructive Sleep Apnea Pediatric,Daytime_sleepiness,3,
+Obstructive Sleep Apnea Pediatric,Snoring,4,
+Obstructive Sleep Apnea Pediatric,Behavioral_symptoms_during_wake_icsd,2,
+Primary Central Sleep Apnea,Breath_abnormalities_complaint,5,
+Primary Central Sleep Apnea,Breath_abnormalities_observation,5,
+Primary Central Sleep Apnea,Daytime_sleepiness,3,
+Primary Central Sleep Apnea,Insomnia_initiating,1,
+Primary Central Sleep Apnea,Insomnia_maintaining,1,
+Primary Central Sleep Apnea,Non_restorative_sleep,3,
+Primary Central Sleep Apnea,Snoring,1,
+Primary Central Sleep Apnea Of Infancy,Breath_abnormalities_observation,5,
+Primary Central Sleep Apnea Of Infancy,Cyanosis_icsd,4,
+Primary Central Sleep Apnea Of Prematurity,Breath_abnormalities_observation,5,
+Primary Central Sleep Apnea Of Prematurity,Cyanosis_icsd,4,
+Propriospinal Myoclonus At Sleep Onset,Myoclonic_jerks_icsd,5,
+REM Sleep Behavior Disorder,Altered_oniric_activity,1,
+REM Sleep Behavior Disorder,Behavioral_symptoms_during_sleep,5,
+REM Sleep Behavior Disorder,Vocalisation,4,
+Recurrent Isolated Sleep Paralysis,Motor_paralysis_icsd,5,
+Restless Legs Syndrome,Insomnia_initiating,3,
+Restless Legs Syndrome,Insomnia_maintaining,3,
+Restless Legs Syndrome,Leg_sensory_discomfort,4,
+Restless Legs Syndrome,Legs_movement,5,
+Shift Work Disorder,Daytime_sleepiness,3,
+Shift Work Disorder,Disturbed_sleep_period,3,
+Shift Work Disorder,Insomnia_early,3,
+Shift Work Disorder,Insomnia_initiating,3,
+Shift Work Disorder,Insomnia_maintaining,3,
+Shift Work Disorder,Short_sleep_time,3,
+Sleep Related Bruxism,Tooth_grinding_icsd,5,
+Sleep Related Eating Disorder,Amnesia,3,
+Sleep Related Eating Disorder,Eating_symptoms,5,
+Sleep Related Eating Disorder,Incomplete_awakening,4,
+Sleep Related Hallucinations,Hallucination_icsd,5,
+Sleep Related Leg Cramps,Leg_sensory_discomfort,1,
+Sleep Related Rhythmic Movement Disorder,Insomnia_early,1,
+Sleep Related Rhythmic Movement Disorder,Insomnia_initiating,1,
+Sleep Related Rhythmic Movement Disorder,Insomnia_maintaining,1,
+Sleep Related Rhythmic Movement Disorder,Rhythmic_movement_icsd,5,
+Sleep Terrors,Abnormal_responsiveness,5,
+Sleep Terrors,Altered_oniric_activity,1,
+Sleep Terrors,Amnesia,3,
+Sleep Terrors,Autonomic_symptoms,3,
+Sleep Terrors,Behavioral_symptoms_during_sleep,1,
+Sleep Terrors,Fright_behavior,4,
+Sleep Terrors,Incomplete_awakening,4,
+Sleep Terrors,Vocalisation,1,
+Sleep walking,Abnormal_responsiveness,4,
+Sleep walking,Altered_oniric_activity,1,
+Sleep walking,Ambulation,5,
+Sleep walking,Amnesia,3,
+Sleep walking,Behavioral_symptoms_during_sleep,1,
+Sleep walking,Incomplete_awakening,4,
+Sleep Enuresis,Unvolontary_voiding,5,
