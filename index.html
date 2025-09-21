@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Graphe Symptômes ↔ Troubles</title>
+  <title>Graph Symptoms ↔ Disorders</title>
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <style>
     body {
@@ -91,19 +91,19 @@
 <body>
   <!-- Sidebar -->
   <div id="controls">
-    <h2>Filtres</h2>
+    <h2>Filters</h2>
 
-    <label for="poidsFilter">Poids minimum</label>
+    <label for="poidsFilter">Weight</label>
     <input type="range" id="poidsFilter" min="1" max="5" value="1">
     <span id="poidsValue">1</span>
 
-    <label>Troubles</label>
-    <div id="symptomesFilter" class="checkbox-list"></div>
-
-    <label>Symptômes</label>
+    <label>Disorders</label>
     <div id="troublesFilter" class="checkbox-list"></div>
 
-    <button id="resetBtn">Réinitialiser</button>
+    <label>Symptoms</label>
+    <div id="symptomesFilter" class="checkbox-list"></div>
+
+    <button id="resetBtn">Reset</button>
   </div>
 
   <!-- Graphe -->
@@ -132,8 +132,8 @@
     });
 
     function populateFilters() {
-      const symptomes = Array.from(new Set(allData.map(d => d.Source))).sort();
-      const troubles = Array.from(new Set(allData.map(d => d.Target))).sort();
+      const troubles = Array.from(new Set(allData.map(d => d.Source))).sort();
+      const symptomes = Array.from(new Set(allData.map(d => d.Target))).sort();
 
       const symptomesContainer = document.getElementById("symptomesFilter");
       const troublesContainer = document.getElementById("troublesFilter");
@@ -202,13 +202,13 @@
       const nodesMap = {};
       const links = allData.filter(d => +d.Weight >= poidsMin)
         .filter(d => {
-          if (selectedSymptomes.length > 0 && !selectedSymptomes.includes(d.Source)) return false;
-          if (selectedTroubles.length > 0 && !selectedTroubles.includes(d.Target)) return false;
+          if (selectedSymptomes.length > 0 && !selectedSymptomes.includes(d.Target)) return false;
+          if (selectedTroubles.length > 0 && !selectedTroubles.includes(d.Source)) return false;
           return true;
         })
         .map(d => {
-          if (!nodesMap[d.Source]) nodesMap[d.Source] = { id: d.Source, type: "symptome" };
-          if (!nodesMap[d.Target]) nodesMap[d.Target] = { id: d.Target, type: "trouble" };
+          if (!nodesMap[d.Source]) nodesMap[d.Source] = { id: d.Source, type: "disorder" };
+          if (!nodesMap[d.Target]) nodesMap[d.Target] = { id: d.Target, type: "symptom" };
           return { source: d.Source, target: d.Target, weight: +d.Weight };
         });
 
@@ -227,8 +227,8 @@
         .selectAll("circle")
         .data(nodes)
         .join("circle")
-        .attr("r", d => d.type === "trouble" ? 20 : 12)
-        .attr("fill", d => d.type === "trouble" ? "#ef4444" : "#3b82f6")
+        .attr("r", d => d.type === "disorder" ? 20 : 12)
+        .attr("fill", d => d.type === "disorder" ? "#ef4444" : "#3b82f6")
         .style("stroke", "#fff")
         .style("stroke-width", 2)
         .call(drag(simulation))
