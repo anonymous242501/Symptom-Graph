@@ -20,7 +20,7 @@ Confusional Arousals,Abnormal responsiveness,5
 Confusional Arousals,Altered oniric activity,1
 Confusional Arousals,Amnesia,3
 Confusional Arousals,Behavioral symptoms during sleep,1
-Confusional Arousals,Incomplete awakening icsd,4
+Confusional Arousals,Incomplete awakening,4
 Delayed Sleep Wake Phase Disorder,Daytime sleepiness,1
 Delayed Sleep Wake Phase Disorder,Delay in the sleep period,4
 Delayed Sleep Wake Phase Disorder,Insomnia initiating,4
@@ -137,7 +137,7 @@ Shift Work Disorder,Short sleep time,3
 Sleep Related Bruxism,Tooth grinding (icsd),5
 Sleep Related Eating Disorder,Amnesia,3
 Sleep Related Eating Disorder,Eating symptoms,5
-Sleep Related Eating Disorder,Incomplete_awakening,4
+Sleep Related Eating Disorder,Incomplete awakening,4
 Sleep Related Hallucinations,Hallucination (icsd),5
 Sleep Related Leg Cramps,Leg sensory discomfort,1
 Sleep Related Rhythmic Movement Disorder,Insomnia early,1
@@ -150,7 +150,7 @@ Sleep Terrors,Amnesia,3
 Sleep Terrors,Autonomic symptoms,3
 Sleep Terrors,Behavioral symptoms during sleep,1
 Sleep Terrors,Fright behavior,4
-Sleep Terrors,Incomplete_awakening,4
+Sleep Terrors,Incomplete awakening,4
 Sleep Terrors,Vocalisation,1
 Sleepwalking,Abnormal responsiveness,4
 Sleepwalking,Altered oniric activity,1
@@ -158,4 +158,6 @@ Sleepwalking,Ambulation,5
 Sleepwalking,Amnesia,3
 Sleepwalking,Behavioral symptoms during sleep,1
 Sleepwalking,Incomplete awakening,4
+
 Sleep Enuresis,Unvolontary voiding,5
+
